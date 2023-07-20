@@ -1,0 +1,33 @@
+To convert a VM to Docker
+
+Step 1: Create Nginx Container
+
+docker run nginx
+
+Step 2: Displaying Running Container
+
+docker ps -a
+
+Step 3: Export the Container with the Container name or ID
+
+docker export [container-name] > nginx.tar
+
+Step 4: Import the created tar file as a new Image
+
+docker import - mynginx < nginx.tar
+
+Step 5: List all the images
+
+docker images
+
+Step 6: Save the created image as a new Tar File
+
+docker save -o mynginx1.tar nginx
+
+Step 7: Load Docker image into your system:
+
+docker load < mynginx1.tar
+
+Step 8: View the loaded Docker Image
+
+docker images
