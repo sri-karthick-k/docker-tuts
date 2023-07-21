@@ -38,7 +38,9 @@ docker ps -a
 Step 9: Commit the Container with ID and provide a name
 
 docker commit [CONTAINER_ID] [new_image_name]
+ex: $ docker commit 69582a319466 ubuntu-sri:1.1
 
 Step 10: Verify the image with 
 
 docker images
+ubuntu-sri:1.1 should appear
