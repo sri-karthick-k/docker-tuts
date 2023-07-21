@@ -1,0 +1,39 @@
+Step 1: List all the images
+
+docker images
+
+Step 2: View the containers
+
+docker container ls -a
+
+Step 3: Run any image in the interactive mode
+
+sudo docker run -it ubuntu:23.10 bin/bash
+
+Step 4: Update the Container inside the interactive mode
+
+apt-get update
+
+Step 5: Install any tool in the container
+
+apt-get install nmap
+
+Step 6: Verify the installation process
+
+nmap --version 
+
+Step 7: Exit the container
+
+exit
+
+Step 8: Display the list of launched containers
+
+docker ps -a
+
+Step 9: Commit the Container with ID and provide a name
+
+docker commit [CONTAINER_ID] [new_image_name]
+
+Step 10: Verify the image with 
+
+docker images
