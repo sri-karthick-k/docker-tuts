@@ -1,0 +1,25 @@
+Teq. 17 Sharing Images on the Docker Hub  - To share images on the Docker Hub 
+
+Step 1: Sign-up in Docker Hub repository
+
+Step 2: List all the images in the local
+
+docker images
+
+Step 3: Pull an imaesge if none is available
+
+docker pull ubuntu:23.10
+
+Step 4: Make necessary changes or modifications
+
+apt-get update
+
+apt-get install nmap
+
+Step 5: Tag the Docker image 
+
+docker tag local-image:tagname username/repository:tagname
+
+Step 6: Push the repository to Docker Hub
+
+docker push username/repository:tagname

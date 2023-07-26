@@ -1,0 +1,9 @@
+Teq 16. Docker Tagging To Tag the Image
+
+Step 1: List the images
+
+docker images
+
+Step 2: Specify the name to the existing image
+
+docker tag [IMAGE_ID] [Image_Name]
