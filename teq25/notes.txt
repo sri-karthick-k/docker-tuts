@@ -1,0 +1,26 @@
+Building Images
+
+Teq. 25 Setting the Right Time Zone in the Containers
+
+Step 1: Create a Dockerfile with an Environment
+
+FROM ubuntu:latest
+ENV TZ=Europe/London
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y tzdata
+
+Step 2: Build the Dockerfile
+
+docker build -t sample:1.0 .
+
+Step 3: Run the dockerfile with the command
+
+docker run -e TZ=Europe/London -it sample:1.0
+
+Step 4: Check the date in the interactive mode
+
+date
+
+Step 5: Exit the container
+
+exit
