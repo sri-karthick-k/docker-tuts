@@ -402,23 +402,24 @@ http://localhost:8080
 **STEPS**
 
 1. Create a Dockerfile with multiple images
+
    ![Alt text](image-22.png)
 
-2. Build the images respectively
+3. Build the images respectively
     `docker build -t image1 --target img1 .`
     `docker build -t image2 --target img2 .`
 
-    ![Alt text](image-23.png)
+   ![Alt text](image-23.png)
 
-3. Run the images in the detached mode
+4. Run the images in the detached mode
 
     `docker run -it --name image1 -d image1:latest`
     `docker run -it --name image2 -d image2:latest`
 
-4. Inspect the bridge in the network to get the IP addresses
+5. Inspect the bridge in the network to get the IP addresses
     `docker network inspect bridge`
 
-5. Execute a container and ping the other
+6. Execute a container and ping the other
     `docker container exec -it image1 /bin/sh`
 
     ![Alt text](image-24.png)
